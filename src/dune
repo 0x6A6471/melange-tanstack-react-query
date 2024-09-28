@@ -1,6 +1,7 @@
 (library
  (name melange_tanstack_react_query)
  (public_name melange-tanstack-react-query)
+ (wrapped false)
  (modes melange)
  (libraries reason-react)
  (preprocess

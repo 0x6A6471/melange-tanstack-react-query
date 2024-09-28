@@ -1,4 +1,4 @@
-open ReactQuery__QueryClient
+include ReactQuery__QueryClient
 
 module ReactQueryDevtools = struct
   type button_position =
