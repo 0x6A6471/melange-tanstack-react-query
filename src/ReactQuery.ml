@@ -1,17 +1,17 @@
 include ReactQuery__QueryClient
 include ReactQuery__DevTools
 
-module QueryClient = struct
-  type t
-
-  external make : unit -> t = "QueryClient"
-  [@@mel.module "@tanstack/react-query"]
-end
-
-module QueryDevtools = struct
-  external make : unit -> React.element = "ReactQueryDevtools"
-  [@@mel.module "@tanstack/react-query-devtools"]
-end
+(* module QueryClient = struct *)
+(*   type t *)
+(**)
+(*   external make : unit -> t = "QueryClient" *)
+(*   [@@mel.module "@tanstack/react-query"] *)
+(* end *)
+(**)
+(* module QueryDevtools = struct *)
+(*   external make : unit -> React.element = "ReactQueryDevtools" *)
+(*   [@@mel.module "@tanstack/react-query-devtools"] *)
+(* end *)
 
 external keepPreviousData : 'a = "keepPreviousData"
 [@@mel.module "@tanstack/react-query"]
