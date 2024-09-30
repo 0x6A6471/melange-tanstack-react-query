@@ -148,6 +148,19 @@ type ('params, 'data, 'error, 'context) mutation_state =
   ; mutateAsync : 'params -> 'data Js.Promise.t
   }
 
+let make_mutation
+  ~mutationFn
+  ?retry
+  ?retryDelay
+  ?onMutate
+  ?onError
+  ?onSuccess
+  ?onSettled
+  ()
+  =
+  { mutationFn; retry; retryDelay; onMutate; onError; onSuccess; onSettled }
+;;
+
 external useMutation
   :  ('params, 'data, 'error, 'context) use_mutation_options
   -> ('params, 'data, 'error, 'context) mutation_state
