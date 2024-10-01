@@ -18,5 +18,6 @@ Bindings support tested with `"@tanstack/react-query": "5.56.2"`
 
 ## TODO
 
+- [ ] fix mis-curried `useMutation`
 - [ ] Add tests
 - [ ] Add examples
