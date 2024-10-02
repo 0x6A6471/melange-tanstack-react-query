@@ -144,8 +144,8 @@ type ('params, 'data, 'error, 'context) mutation_state =
   ; onError : 'error -> 'params -> 'context -> unit
   ; onSuccess : 'data -> 'params -> 'context -> unit
   ; onSettled : 'data -> 'error -> 'params -> 'context -> unit
-  ; mutate : 'params -> unit
-  ; mutateAsync : 'params -> 'data Js.Promise.t
+  ; mutate : ('params -> unit[@u])
+  ; mutateAsync : ('params -> 'data Js.Promise.t[@u])
   }
 
 external useMutation
