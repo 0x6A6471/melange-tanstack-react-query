@@ -141,9 +141,9 @@ type ('params, 'data, 'error, 'context) mutation_state =
   ; isFetching : bool
   ; status : mutation_status
   ; reset : unit -> unit
-  ; onError : ('error -> 'params -> 'context -> unit[@u])
-  ; onSuccess : ('data -> 'params -> 'context -> unit[@u])
-  ; onSettled : ('data -> 'error -> 'params -> 'context -> unit[@u])
+  ; onError : 'error -> 'params -> 'context -> unit
+  ; onSuccess : 'data -> 'params -> 'context -> unit
+  ; onSettled : 'data -> 'error -> 'params -> 'context -> unit
   ; mutate : ('params -> unit[@u])
   ; mutateAsync : ('params -> 'data Js.Promise.t[@u])
   }
